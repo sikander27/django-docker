@@ -1,0 +1,6 @@
+docker-compose build
+docker-compose run --rm app django-admin startproject core .
+docker-compose up
+docker exec -it django_container /bin/bash
+docker-compose run django_app sh -c "django-admin startapp newapp ."
+docker exec -it django_app sh
